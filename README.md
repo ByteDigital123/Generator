@@ -12,9 +12,7 @@ composer require bytedigital123/scaffold
 
 ## Usage
 
-```php
-run scaffold:project and follow the instructions
-```
+Run `scaffold:project` and follow the instructions.
 
 ### Testing
 
