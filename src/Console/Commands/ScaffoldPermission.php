@@ -41,7 +41,6 @@ class ScaffoldPermission extends Command
      */
     public function handle()
     {
-        $this->info('creating the standard permissions for ' . $this->argument('model'));
         $this->permissionService->createStaticPermissions($this->argument('model'));
     }
 }
