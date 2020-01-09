@@ -1,0 +1,14 @@
+<?php
+
+namespace DummyNamespace;
+
+use App\Models\ClassName;
+use App\SearchFilters\ApiSearchableTrait;
+
+class DummyName
+{
+    protected static $model = ClassName::class;
+    protected static $namespace = __NAMESPACE__;
+
+    use ApiSearchableTrait;
+}

@@ -1,0 +1,94 @@
+<?php
+
+namespace DummyNamespace;
+
+use Illuminate\Http\Request;
+use App\Services\DummyService;
+use App\Models\DummyModelClass;
+use App\Http\SearchFilters\Location\DummyModelClass\DummyModelClassSearch;
+use App\Http\Resources\Location\DummyModelClass\DummyResource;
+use App\Http\Requests\Location\DummyModelClass\DummyUpdateRequest;
+use App\Http\Requests\Location\DummyModelClass\DummyStoreRequest;
+use App\Http\Controllers\Controller;
+
+class DummyTest extends Controller
+{
+
+    protected $service;
+
+    public function __construct(DummyService $service)
+    {
+        $this->service = $service;
+    }
+
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function index(Request $request)
+    {
+        $this->authorize('list', DummyModelClass::class);
+        return DummyResource::collection(DummyModelClassSearch::apply($request));
+
+    }
+
+    /**
+     * Store a newly created resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function store(DummyStoreRequest $request)
+    {
+        $this->authorize('create', DummyModelClass::class);
+
+        $attributes = $request->all();
+
+        return $this->service->create($attributes);
+    }
+
+    /**
+     * Display the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function show($id)
+    {
+        $this->authorize('view', DummyModelClass::class);
+        return new DummyResource($this->service->getById($id));
+    }
+
+    /**
+     * Update the specified resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function update($id, DummyUpdateRequest $request)
+    {
+        $this->authorize('update', DummyModelClass::class);
+
+        $attributes = $request->all();
+
+        return $this->service->update($id, $attributes);
+    }
+
+    /**
+     * Remove the specified resource from storage.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function destroy(Request $request)
+    {
+        $this->authorize('delete', DummyModelClass::class);
+
+        $attributes = $request->json()->all();
+
+        return $this->service->delete($attributes);
+    }
+
+}

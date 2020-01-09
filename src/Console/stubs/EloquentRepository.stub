@@ -1,0 +1,16 @@
+<?php
+
+namespace DummyNamespace;
+
+use App\Repositories\DummyModelClass\DummyInterface;
+use DummyFullModelClass;
+use App\Repositories\BaseRepository;
+
+class DummyClass extends BaseRepository implements DummyInterface
+{
+    public $model;
+
+    function __construct(DummyModelClass $model) {
+        $this->model = $model;
+    }
+}
