@@ -7,7 +7,7 @@ use InvalidArgumentException;
 use Illuminate\Support\Str;
 use Illuminate\Console\GeneratorCommand;
 
-class ScaffoldServiceProvider extends GeneratorCommand
+class ScaffoldNewServiceProvider extends GeneratorCommand
 {
     /**
      * The name and signature of the console command.

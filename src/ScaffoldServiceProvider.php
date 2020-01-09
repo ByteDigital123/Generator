@@ -3,9 +3,9 @@
 namespace Bytedigital123\Scaffold;
 
 use Illuminate\Support\ServiceProvider;
+use Bytedigital123\Scaffold\ScaffoldServiceProvider;
 use Bytedigital123\Scaffold\Scaffold;
 use Bytedigital123\Scaffold\Console\Commands\ScaffoldSingle;
-use Bytedigital123\Scaffold\Console\Commands\ScaffoldServiceProvider;
 use Bytedigital123\Scaffold\Console\Commands\ScaffoldService;
 use Bytedigital123\Scaffold\Console\Commands\ScaffoldResourceFromModel;
 use Bytedigital123\Scaffold\Console\Commands\ScaffoldRequestFromModel;
