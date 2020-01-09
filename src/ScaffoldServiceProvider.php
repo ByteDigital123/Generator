@@ -3,7 +3,6 @@
 namespace Bytedigital123\Scaffold;
 
 use Illuminate\Support\ServiceProvider;
-use Bytedigital123\Scaffold\ScaffoldServiceProvider;
 use Bytedigital123\Scaffold\Scaffold;
 use Bytedigital123\Scaffold\Console\Commands\ScaffoldSingle;
 use Bytedigital123\Scaffold\Console\Commands\ScaffoldService;
@@ -15,6 +14,7 @@ use Bytedigital123\Scaffold\Console\Commands\ScaffoldProvider;
 use Bytedigital123\Scaffold\Console\Commands\ScaffoldProject;
 use Bytedigital123\Scaffold\Console\Commands\ScaffoldPolicy;
 use Bytedigital123\Scaffold\Console\Commands\ScaffoldPermission;
+use Bytedigital123\Scaffold\Console\Commands\ScaffoldNewServiceProvider;
 use Bytedigital123\Scaffold\Console\Commands\ScaffoldModelSearch;
 use Bytedigital123\Scaffold\Console\Commands\ScaffoldInterface;
 use Bytedigital123\Scaffold\Console\Commands\ScaffoldControllerFromModels;
