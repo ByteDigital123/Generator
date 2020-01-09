@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Console\Commands\Boilerplate;
+namespace Bytedigital123\Scaffold\Console\Commands;
 
 use Illuminate\Console\Command;
 
@@ -41,33 +41,31 @@ class ScaffoldRepositoriesFromModels extends Command
             'AdminUser',
             'Permission',
             'PermissionGroup',
-            'Role'
+            'Role',
         ];
-
 
         // run through each model
         foreach (glob("./app/*.php") as $file) {
             $filename = basename($file, '.php');
 
-            if (! in_array($filename, $currentFiles)) {
+            if (!in_array($filename, $currentFiles)) {
 
                 // call Create Interface
                 \Artisan::call('make:interface', [
                     'name' => $filename . "Interface",
-                    '--model' => $filename
+                    '--model' => $filename,
                 ]);
-
 
                 // call Create Repository
                 \Artisan::call('make:repository', [
                     'name' => "\Eloquent" . $filename . "Repository",
-                    '--model' => $filename
+                    '--model' => $filename,
                 ]);
-                
+
                 // Call Create ServiceProvider
                 \Artisan::call('make:serviceProvider', [
                     'name' => $filename . "ServiceProvider",
-                    '--model' => $filename
+                    '--model' => $filename,
                 ]);
             }
         }

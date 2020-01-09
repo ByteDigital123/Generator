@@ -1,11 +1,11 @@
 <?php
 
-namespace App\Console\Commands\Boilerplate;
+namespace Bytedigital123\Scaffold\Console\Commands;
 
-use Illuminate\Console\GeneratorCommand;
-use Illuminate\Support\Str;
-use InvalidArgumentException;
 use Symfony\Component\Console\Input\InputOption;
+use InvalidArgumentException;
+use Illuminate\Support\Str;
+use Illuminate\Console\GeneratorCommand;
 
 class ScaffoldServiceProvider extends GeneratorCommand
 {
@@ -44,7 +44,7 @@ class ScaffoldServiceProvider extends GeneratorCommand
     {
         return [
             ['model', 'm', InputOption::VALUE_REQUIRED, 'Generate a repository for the given model.'],
-            ['location', 'l', InputOption::VALUE_REQUIRED, 'Specify the location for the namespace']
+            ['location', 'l', InputOption::VALUE_REQUIRED, 'Specify the location for the namespace'],
         ];
     }
 
@@ -78,22 +78,22 @@ class ScaffoldServiceProvider extends GeneratorCommand
     }
 
     /**
-    * Build the replacement values.
-    *
-    * @param array $replace
-    *
-    * @return array
-    */
+     * Build the replacement values.
+     *
+     * @param array $replace
+     *
+     * @return array
+     */
     protected function buildModelReplacements(array $replace)
     {
         $modelClass = $this->parseModel($this->option('model'));
 
         return array_merge($replace, [
             'DummyFullModelClass' => $modelClass,
-            'DummyModelClass'     => class_basename($modelClass),
-            'DummyInterface'      => class_basename($modelClass) . 'Interface',
-            'DummyClass'          => class_basename($modelClass) . 'RoleRepoServiceProvider',
-            'DummyFullInterface'  => 'App\Repositories\\' . class_basename($modelClass) . '\\' . class_basename($modelClass) . 'Interface',
+            'DummyModelClass' => class_basename($modelClass),
+            'DummyInterface' => class_basename($modelClass) . 'Interface',
+            'DummyClass' => class_basename($modelClass) . 'RoleRepoServiceProvider',
+            'DummyFullInterface' => 'App\Repositories\\' . class_basename($modelClass) . '\\' . class_basename($modelClass) . 'Interface',
             'DummyFullRepository' => 'App\Repositories\\' . class_basename($modelClass) . '\Eloquent' . class_basename($modelClass) . 'Repository',
         ]);
     }
@@ -112,23 +112,23 @@ class ScaffoldServiceProvider extends GeneratorCommand
         }
 
         $model = trim(str_replace('/', '\\', $model), '\\');
-        
-        if (! Str::startsWith($model, $rootNamespace = $this->laravel->getNamespace())) {
+
+        if (!Str::startsWith($model, $rootNamespace = $this->laravel->getNamespace())) {
             $model = $rootNamespace . $model;
         }
-        
+
         return $model;
     }
 
     /**
-    * Get the default namespace for the class.
-    *
-    * @param string $rootNamespace
-    *
-    * @return string
-    */
+     * Get the default namespace for the class.
+     *
+     * @param string $rootNamespace
+     *
+     * @return string
+     */
     protected function getDefaultNamespace($rootNamespace)
     {
-        return $rootNamespace . '\Repositories\\' . $this->option('model') ;
+        return $rootNamespace . '\Repositories\\' . $this->option('model');
     }
 }

@@ -1,11 +1,11 @@
 <?php
 
-namespace App\Console\Commands\Boilerplate;
+namespace Bytedigital123\Scaffold\Console\Commands;
 
-use Illuminate\Support\Str;
-use InvalidArgumentException;
-use Illuminate\Console\GeneratorCommand;
 use Symfony\Component\Console\Input\InputOption;
+use InvalidArgumentException;
+use Illuminate\Support\Str;
+use Illuminate\Console\GeneratorCommand;
 
 class ScaffoldPolicy extends GeneratorCommand
 {
@@ -45,7 +45,7 @@ class ScaffoldPolicy extends GeneratorCommand
     {
         return [
             ['model', 'm', InputOption::VALUE_REQUIRED, 'Generate a policy for the given model.'],
-            ['location', 'l', InputOption::VALUE_REQUIRED, 'Specify the location for the namespace']
+            ['location', 'l', InputOption::VALUE_REQUIRED, 'Specify the location for the namespace'],
         ];
     }
 
@@ -79,19 +79,19 @@ class ScaffoldPolicy extends GeneratorCommand
     }
 
     /**
-    * Build the replacement values.
-    *
-    * @param array $replace
-    *
-    * @return array
-    */
+     * Build the replacement values.
+     *
+     * @param array $replace
+     *
+     * @return array
+     */
     protected function buildModelReplacements(array $replace)
     {
         $modelClass = $this->parseModel($this->option('model'));
 
         return array_merge($replace, [
-            'DummyClass'     => class_basename($modelClass),
-            'SnakeClassName' => Str::snake(class_basename($modelClass))
+            'DummyClass' => class_basename($modelClass),
+            'SnakeClassName' => Str::snake(class_basename($modelClass)),
         ]);
     }
 
@@ -109,21 +109,21 @@ class ScaffoldPolicy extends GeneratorCommand
         }
 
         $model = trim(str_replace('/', '\\', $model), '\\');
-        
-        if (! Str::startsWith($model, $rootNamespace = $this->laravel->getNamespace())) {
+
+        if (!Str::startsWith($model, $rootNamespace = $this->laravel->getNamespace())) {
             $model = $rootNamespace . $model;
         }
-        
+
         return $model;
     }
 
     /**
-    * Get the default namespace for the class.
-    *
-    * @param string $rootNamespace
-    *
-    * @return string
-    */
+     * Get the default namespace for the class.
+     *
+     * @param string $rootNamespace
+     *
+     * @return string
+     */
     protected function getDefaultNamespace($rootNamespace)
     {
         return $rootNamespace . '\Policies\\' . $this->option('location');

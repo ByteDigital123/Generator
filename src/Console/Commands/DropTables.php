@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Console\Commands\Boilerplate;
+namespace Bytedigital123\Scaffold\Console\Commands;
 
-use DB;
 use Illuminate\Console\Command;
+use DB;
 
 class DropTables extends Command
 {
@@ -39,7 +39,7 @@ class DropTables extends Command
     public function handle()
     {
         $colname = 'Tables_in_' . env('DB_DATABASE');
-   
+
         $tables = DB::select('SHOW TABLES');
 
         $droplist = [];

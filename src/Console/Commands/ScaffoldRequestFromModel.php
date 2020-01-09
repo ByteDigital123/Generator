@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Console\Commands\Boilerplate;
+namespace Bytedigital123\Scaffold\Console\Commands;
 
 use Illuminate\Console\Command;
 
@@ -41,19 +41,19 @@ class ScaffoldRequestFromModel extends Command
             'AdminUser',
             'Permission',
             'PermissionGroup',
-            'Role'
+            'Role',
         ];
 
         foreach (glob("./app/*.php") as $file) {
             $filename = basename($file, '.php');
 
-            if (! in_array($filename, $currentFiles)) {
+            if (!in_array($filename, $currentFiles)) {
                 \Artisan::call('make:request', [
-                    'name' => $this->option('location') . "\\"  . $filename . "\Store" . $filename . "Request"
+                    'name' => $this->option('location') . "\\" . $filename . "\Store" . $filename . "Request",
                 ]);
 
                 \Artisan::call('make:request', [
-                    'name' => $this->option('location') . "\\"  . $filename . "\Update" . $filename . "Request"
+                    'name' => $this->option('location') . "\\" . $filename . "\Update" . $filename . "Request",
                 ]);
             }
         }

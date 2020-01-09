@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Console\Commands\Boilerplate;
+namespace Bytedigital123\Scaffold\Console\Commands;
 
 use Illuminate\Console\Command;
 
@@ -41,19 +41,19 @@ class ScaffoldControllerFromModels extends Command
             'AdminUser',
             'Permission',
             'PermissionGroup',
-            'Role'
+            'Role',
         ];
 
         // run through each model
         foreach (glob("./app/*.php") as $file) {
             $filename = basename($file, '.php');
 
-            if (! in_array($filename, $currentFiles)) {
+            if (!in_array($filename, $currentFiles)) {
                 // call Create controller
                 \Artisan::call('create:controller', [
                     'name' => $filename . "Controller",
                     '--model' => $filename,
-                    '--location' => $this->option('location')
+                    '--location' => $this->option('location'),
                 ]);
             }
         }

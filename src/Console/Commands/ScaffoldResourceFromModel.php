@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Console\Commands\Boilerplate;
+namespace Bytedigital123\Scaffold\Console\Commands;
 
 use Illuminate\Console\Command;
 
@@ -41,20 +41,19 @@ class ScaffoldResourceFromModel extends Command
             'AdminUser',
             'Permission',
             'PermissionGroup',
-            'Role'
+            'Role',
         ];
-
 
         foreach (glob("./app/*.php") as $file) {
             $filename = basename($file, '.php');
 
-            if (! in_array($filename, $currentFiles)) {
+            if (!in_array($filename, $currentFiles)) {
                 \Artisan::call('make:resource', [
-                    'name' => $this->option('location') . "\\"  . $filename . "\\" . $filename . "Resource"
+                    'name' => $this->option('location') . "\\" . $filename . "\\" . $filename . "Resource",
                 ]);
 
                 \Artisan::call('make:resource', [
-                    'name' => $this->option('location') . "\\"  . $filename . "\\" . $filename . "Collection"
+                    'name' => $this->option('location') . "\\" . $filename . "\\" . $filename . "Collection",
                 ]);
             }
         }

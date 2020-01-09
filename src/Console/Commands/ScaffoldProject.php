@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Console\Commands\Boilerplate;
+namespace Bytedigital123\Scaffold\Console\Commands;
 
 use Illuminate\Console\Command;
 
