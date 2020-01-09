@@ -3,7 +3,7 @@
 namespace Bytedigital123\Scaffold;
 
 use Illuminate\Support\ServiceProvider;
-use App\Console\Commands\Boilerplate\ScaffoldProject;
+use Bytedigital123\Scaffold\Console\Commands\ScaffoldProject;
 
 class ScaffoldServiceProvider extends ServiceProvider
 {
