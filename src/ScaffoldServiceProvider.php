@@ -76,7 +76,7 @@ class ScaffoldServiceProvider extends ServiceProvider
                 ScaffoldRequestFromModel::class,
                 ScaffoldResourceFromModel::class,
                 ScaffoldService::class,
-                ScaffoldServiceProvider::class,
+                ScaffoldNewServiceProvider::class,
                 ScaffoldSingle::class,
             ]);
         }
