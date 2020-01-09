@@ -33,7 +33,7 @@ class ScaffoldPolicy extends GeneratorCommand
      */
     protected function getStub()
     {
-        return './app/Console/stubs/Policy.stub';
+        return './vendor/bytedigital123/scaffold/src/Console/stubs/Policy.stub';
     }
 
     /**

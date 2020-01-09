@@ -32,7 +32,7 @@ class ScaffoldRepository extends GeneratorCommand
      */
     protected function getStub()
     {
-        return './app/Console/stubs/EloquentRepository.stub';
+        return './vendor/bytedigital123/scaffold/src/Console/stubs/EloquentRepository.stub';
     }
 
     /**

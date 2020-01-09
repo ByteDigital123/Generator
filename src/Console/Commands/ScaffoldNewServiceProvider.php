@@ -32,7 +32,7 @@ class ScaffoldNewServiceProvider extends GeneratorCommand
      */
     protected function getStub()
     {
-        return './app/Console/stubs/RepoServiceProvider.stub';
+        return './vendor/bytedigital123/scaffold/src/Console/stubs/RepoServiceProvider.stub';
     }
 
     /**

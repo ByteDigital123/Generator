@@ -32,7 +32,7 @@ class ScaffoldModelSearch extends GeneratorCommand
      */
     protected function getStub()
     {
-        return './app/Console/stubs/ModelSearch.stub';
+        return './vendor/bytedigital123/scaffold/src/Console/stubs/ModelSearch.stub';
     }
 
     /**

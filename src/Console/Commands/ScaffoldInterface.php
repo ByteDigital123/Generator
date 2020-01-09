@@ -32,7 +32,7 @@ class ScaffoldInterface extends GeneratorCommand
      */
     protected function getStub()
     {
-        return './app/Console/stubs/Interface.stub';
+        return './vendor/bytedigital123/scaffold/src/Console/stubs/Interface.stub';
     }
 
     /**

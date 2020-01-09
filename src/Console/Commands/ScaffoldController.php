@@ -33,9 +33,10 @@ class ScaffoldController extends GeneratorCommand
     {
         $locationOption = $this->option('location');
         if ($locationOption == 'Api') {
-            return './app/Console/stubs/ApiController.stub';
+            return './vendor/bytedigital123/scaffold/src/Console/stubs/ApiController.stub';
         }
-        return './app/Console/stubs/Controller.stub';
+
+        return './vendor/bytedigital123/scaffold/src/Console/stubs/Controller.stub';
     }
 
     /**
