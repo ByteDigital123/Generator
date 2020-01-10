@@ -2,6 +2,13 @@
 
 A package to quickly scaffold controllers, resources, requests, repositories, services and policies for namespaced folders.
 
+#### Todo:
+
+-   Clean up the spaghetti code.
+-   Add in auto migrations
+-   Add in auto model creation
+-   Add in auto database factory creation
+
 ## Installation
 
 You can install the package via composer:
