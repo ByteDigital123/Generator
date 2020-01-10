@@ -17,7 +17,7 @@ return [
         'BaseModel',
     ],
 
-    // the namepsave where
+    // the namepsace where
     // we are going to generate
     // the files for
     "areas" => [
