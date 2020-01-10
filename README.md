@@ -12,7 +12,7 @@ composer require bytedigital123/scaffold
 
 ## Usage
 
-publish the files with `php artisan vendor:publish --provider="Bytedigital123\Scaffold\ScaffoldServiceProvider`
+publish the files with `php artisan vendor:publish --provider="Bytedigital123\Scaffold\ScaffoldServiceProvider"`
 
 run the code with `php artisan scaffold:project`.
 
