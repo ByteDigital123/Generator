@@ -12,7 +12,9 @@ composer require bytedigital123/scaffold
 
 ## Usage
 
-Run `scaffold:project` and follow the instructions.
+publish the files with `php artisan vendor:publish --provider="Bytedigital123\Scaffold\ScaffoldServiceProvider`
+
+run the code with `php artisan scaffold:project`.
 
 ### Testing
 
