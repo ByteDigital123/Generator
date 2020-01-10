@@ -38,7 +38,7 @@ class GenerateProviderAppConfig extends Command
     public function handle()
     {
 
-        foreach (glob("./app/Models/*.php") as $file) {
+        foreach (glob('./' . config('scaffold.models') . '/*.php') as $file) {
             $model = basename($file, '.php');
 
             if (!in_array($model, config('scaffold.legacyModels'))) {

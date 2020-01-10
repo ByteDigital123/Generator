@@ -45,7 +45,7 @@ class ScaffoldControllerFromModels extends Command
         ];
 
         // run through each model
-        foreach (glob("./app/*.php") as $file) {
+        foreach (glob('./' . config('scaffold.models') . '/*.php') as $file) {
             $filename = basename($file, '.php');
 
             if (!in_array($filename, $currentFiles)) {

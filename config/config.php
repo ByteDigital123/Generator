@@ -27,6 +27,6 @@ return [
     ],
 
     // where the models live
-    "models" => 'app\Models',
+    "models" => 'app/Models',
 
 ];

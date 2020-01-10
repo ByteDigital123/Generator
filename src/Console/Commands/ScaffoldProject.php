@@ -40,7 +40,7 @@ class ScaffoldProject extends Command
 
         $location = $this->choice('Which namespace shall we save them under?', config('scaffold.areas'));
 
-        foreach (glob("./app/Models/*.php") as $file) {
+        foreach (glob('./' . config('scaffold.models') . '/*.php') as $file) {
             $model = basename($file, '.php');
 
             if (!in_array($model, config('scaffold.legacyModels'))) {
