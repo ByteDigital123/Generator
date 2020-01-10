@@ -54,6 +54,10 @@ If you discover any security related issues, please email chris@byte-digital.com
 
 The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
 
+<p align="center">
+  <img width="460" height="300" src="https://media.giphy.com/media/jUwpNzg9IcyrK/giphy.gif">
+</p>
+
 <center>
 
 ![](https://media.giphy.com/media/jUwpNzg9IcyrK/giphy.gif)
