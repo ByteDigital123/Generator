@@ -10,7 +10,9 @@ You can install the package via composer:
 composer require bytedigital123/scaffold
 ```
 
-![](https://thumbs.gfycat.com/FrequentBouncyDodobird-size_restricted.gif)
+<p align="center">
+  <img src="https://thumbs.gfycat.com/FrequentBouncyDodobird-size_restricted.gif">
+</p>
 
 ## Usage
 
@@ -36,7 +38,9 @@ Just to be safe
 php artisan config:clear
 ```
 
-![](https://media1.tenor.com/images/b5e20f278452f14e56c0c0ae77cd0f9c/tenor.gif?itemid=6161308)
+<p align="center">
+  <img src="https://media1.tenor.com/images/b5e20f278452f14e56c0c0ae77cd0f9c/tenor.gif?itemid=6161308">
+</p>
 
 ### Changelog
 
@@ -55,11 +59,5 @@ If you discover any security related issues, please email chris@byte-digital.com
 The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
 
 <p align="center">
-  <img width="460" height="300" src="https://media.giphy.com/media/jUwpNzg9IcyrK/giphy.gif">
+  <img src="https://media.giphy.com/media/jUwpNzg9IcyrK/giphy.gif">
 </p>
-
-<center>
-
-![](https://media.giphy.com/media/jUwpNzg9IcyrK/giphy.gif)
-
-</center>
