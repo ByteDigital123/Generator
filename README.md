@@ -2,6 +2,8 @@
 
 A package to quickly scaffold controllers, resources, requests, repositories, services and policies for namespaced folders.
 
+![](https://img.techpowerup.org/200110/5ahof5b6okkb.gif)
+
 ## Installation
 
 You can install the package via composer:
@@ -43,6 +45,4 @@ If you discover any security related issues, please email chris@byte-digital.com
 
 The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
 
-## Laravel Package Boilerplate
-
-This package was generated using the [Laravel Package Boilerplate](https://laravelpackageboilerplate.com).
+![](https://media.giphy.com/media/jUwpNzg9IcyrK/giphy.gif)
