@@ -10,15 +10,33 @@ You can install the package via composer:
 composer require bytedigital123/scaffold
 ```
 
+![](https://thumbs.gfycat.com/FrequentBouncyDodobird-size_restricted.gif)
+
 ## Usage
 
-publish the files with `php artisan vendor:publish --provider="Bytedigital123\Scaffold\ScaffoldServiceProvider"`
+Publish the config file with
+
+```
+php artisan vendor:publish --provider="Bytedigital123\Scaffold\ScaffoldServiceProvider"
+```
 
 The config file holds the details for any models that you dont want files generated for, and the namepsaces that you would like to use. It also has a config for the default place where your models live.
 
 When the code runs, it will run through all of your models in the folder you have told it to look, and generate all the files for each one. If some already exist, it will overwrite them. It will skip any models that you have added to the `legacyModels` config as well.
 
-run the code with `php artisan scaffold:project`.
+Run the code with
+
+```
+php artisan scaffold:project
+```
+
+Just to be safe
+
+```
+php artisan config:clear
+```
+
+![](https://media1.tenor.com/images/b5e20f278452f14e56c0c0ae77cd0f9c/tenor.gif?itemid=6161308)
 
 ### Changelog
 
