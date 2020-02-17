@@ -4,9 +4,9 @@ namespace DummyNamespace;
 
 use App\Http\Controllers\Controller;
 use App\Services\DummyService;
-use App\Http\Requests\DummyModelClass\DummyStoreRequest;
-use App\Http\Requests\DummyModelClass\DummyUpdateRequest;
-use App\Http\Resources\DummyModelClass\DummyResource;
+use App\Http\Requests\Location\DummyModelClass\DummyStoreRequest;
+use App\Http\Requests\Location\DummyModelClass\DummyUpdateRequest;
+use App\Http\Resources\Location\DummyModelClass\DummyResource;
 use Illuminate\Http\Request;
 
 class DummyTest extends Controller

@@ -45,7 +45,7 @@ class DummyTest extends Controller
 
         $attributes = $request->all();
 
-        return $this->service->create($attributes);
+        return $this->service->store($attributes);
     }
 
     /**
