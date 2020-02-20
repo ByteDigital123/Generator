@@ -3,7 +3,7 @@
 namespace DummyNamespace;
 
 use App\Models\ClassName;
-use App\SearchFilters\ApiSearchableTrait;
+use App\Http\SearchFilters\ApiSearchableTrait;
 
 class DummyName
 {

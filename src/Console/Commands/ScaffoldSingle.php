@@ -123,6 +123,7 @@ class ScaffoldSingle extends Command
         try {
             $this->call('scaffold:permission', [
                 'model' => $model,
+                'location' => $location,
             ]);
 
         } catch (\Exception $e) {

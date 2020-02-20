@@ -14,7 +14,7 @@ class ScaffoldPermission extends Command
      *
      * @var string
      */
-    protected $signature = 'scaffold:permission {model}';
+    protected $signature = 'scaffold:permission {model} {location}';
 
     /**
      * The console command description.
@@ -41,6 +41,6 @@ class ScaffoldPermission extends Command
      */
     public function handle()
     {
-        $this->permissionService->createStaticPermissions($this->argument('model'));
+        $this->permissionService->createStaticPermissions($this->argument('model'), $this->argument('location'));
     }
 }
