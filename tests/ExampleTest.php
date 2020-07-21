@@ -1,6 +1,6 @@
 <?php
 
-namespace Bytedigital123\Scaffold\Tests;
+namespace Bytedigital123\pixel-boilerplate\Tests;
 
 use PHPUnit\Framework\TestCase;
 

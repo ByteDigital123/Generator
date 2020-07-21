@@ -1,6 +1,6 @@
 <?php
 
-namespace Bytedigital123\Scaffold\Console\Commands;
+namespace Bytedigital123\pixel-boilerplate\Console\Commands;
 
 use Illuminate\Console\Command;
 use DB;

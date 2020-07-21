@@ -1,6 +1,6 @@
 <?php
 
-namespace Bytedigital123\Scaffold;
+namespace Bytedigital123\pixel-boilerplate;
 
 class Scaffold
 {

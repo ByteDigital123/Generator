@@ -1,27 +1,27 @@
 <?php
 
-namespace Bytedigital123\Scaffold;
+namespace Bytedigital123\pixel-boilerplate;
 
 use Illuminate\Support\ServiceProvider;
-use Bytedigital123\Scaffold\Scaffold;
-use Bytedigital123\Scaffold\Console\Commands\ScaffoldSingle;
-use Bytedigital123\Scaffold\Console\Commands\ScaffoldService;
-use Bytedigital123\Scaffold\Console\Commands\ScaffoldResourceFromModel;
-use Bytedigital123\Scaffold\Console\Commands\ScaffoldRequestFromModel;
-use Bytedigital123\Scaffold\Console\Commands\ScaffoldRepository;
-use Bytedigital123\Scaffold\Console\Commands\ScaffoldRepositoriesFromModels;
-use Bytedigital123\Scaffold\Console\Commands\ScaffoldProvider;
-use Bytedigital123\Scaffold\Console\Commands\ScaffoldProject;
-use Bytedigital123\Scaffold\Console\Commands\ScaffoldPolicy;
-use Bytedigital123\Scaffold\Console\Commands\ScaffoldPermission;
-use Bytedigital123\Scaffold\Console\Commands\ScaffoldNewServiceProvider;
-use Bytedigital123\Scaffold\Console\Commands\ScaffoldModelSearch;
-use Bytedigital123\Scaffold\Console\Commands\ScaffoldInterface;
-use Bytedigital123\Scaffold\Console\Commands\ScaffoldControllerFromModels;
-use Bytedigital123\Scaffold\Console\Commands\ScaffoldController;
-use Bytedigital123\Scaffold\Console\Commands\GenerateRepositoryAppConfig;
-use Bytedigital123\Scaffold\Console\Commands\GenerateProviderAppConfig;
-use Bytedigital123\Scaffold\Console\Commands\GeneratePolicyAppConfig;
+use Bytedigital123\pixel-boilerplate\Scaffold;
+use Bytedigital123\pixel-boilerplate\Console\Commands\ScaffoldSingle;
+use Bytedigital123\pixel-boilerplate\Console\Commands\ScaffoldService;
+use Bytedigital123\pixel-boilerplate\Console\Commands\ScaffoldResourceFromModel;
+use Bytedigital123\pixel-boilerplate\Console\Commands\ScaffoldRequestFromModel;
+use Bytedigital123\pixel-boilerplate\Console\Commands\ScaffoldRepository;
+use Bytedigital123\pixel-boilerplate\Console\Commands\ScaffoldRepositoriesFromModels;
+use Bytedigital123\pixel-boilerplate\Console\Commands\ScaffoldProvider;
+use Bytedigital123\pixel-boilerplate\Console\Commands\ScaffoldProject;
+use Bytedigital123\pixel-boilerplate\Console\Commands\ScaffoldPolicy;
+use Bytedigital123\pixel-boilerplate\Console\Commands\ScaffoldPermission;
+use Bytedigital123\pixel-boilerplate\Console\Commands\ScaffoldNewServiceProvider;
+use Bytedigital123\pixel-boilerplate\Console\Commands\ScaffoldModelSearch;
+use Bytedigital123\pixel-boilerplate\Console\Commands\ScaffoldInterface;
+use Bytedigital123\pixel-boilerplate\Console\Commands\ScaffoldControllerFromModels;
+use Bytedigital123\pixel-boilerplate\Console\Commands\ScaffoldController;
+use Bytedigital123\pixel-boilerplate\Console\Commands\GenerateRepositoryAppConfig;
+use Bytedigital123\pixel-boilerplate\Console\Commands\GenerateProviderAppConfig;
+use Bytedigital123\pixel-boilerplate\Console\Commands\GeneratePolicyAppConfig;
 
 class ScaffoldServiceProvider extends ServiceProvider
 {

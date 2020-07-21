@@ -1,11 +1,11 @@
 <?php
 
-namespace Bytedigital123\Scaffold;
+namespace Bytedigital123\pixel-boilerplate;
 
 use Illuminate\Support\Facades\Facade;
 
 /**
- * @see \Bytedigital123\Scaffold\Skeleton\SkeletonClass
+ * @see \Bytedigital123\pixel-boilerplate\Skeleton\SkeletonClass
  */
 class ScaffoldFacade extends Facade
 {
