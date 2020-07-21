@@ -20,7 +20,7 @@ class DummyClass extends BaseService
      */
     public function count($with = [])
     {
-        return $this->model->with($with)->get();
+        return $this->model->count();
     }
 
     /**
