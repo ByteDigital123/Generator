@@ -75,23 +75,23 @@ class ScaffoldSingle extends Command
             $this->error($e->getMessage());
         }
 
-        // 4. create repositories
-        \Artisan::call('scaffold:interface', [
-            'name' => $model . "Interface",
-            '--model' => $model,
-        ]);
+//        // 4. create repositories
+//        \Artisan::call('scaffold:interface', [
+//            'name' => $model . "Interface",
+//            '--model' => $model,
+//        ]);
+//
+//        // call Create Repository
+//        \Artisan::call('scaffold:repository', [
+//            'name' => "\Eloquent" . $model . "Repository",
+//            '--model' => $model,
+//        ]);
 
-        // call Create Repository
-        \Artisan::call('scaffold:repository', [
-            'name' => "\Eloquent" . $model . "Repository",
-            '--model' => $model,
-        ]);
-
-        // Call Create ServiceProvider
-        \Artisan::call('scaffold:serviceProvider', [
-            'name' => $model . "ServiceProvider",
-            '--model' => $model,
-        ]);
+//        // Call Create ServiceProvider
+//        \Artisan::call('scaffold:serviceProvider', [
+//            'name' => $model . "ServiceProvider",
+//            '--model' => $model,
+//        ]);
 
         // Call Create Search
         \Artisan::call('scaffold:search', [
@@ -106,19 +106,19 @@ class ScaffoldSingle extends Command
             '--location' => $location,
         ]);
 
-        \Artisan::call('make:factory', [
-            'name' => $model . "Factory",
-        ]);
+//        \Artisan::call('make:factory', [
+//            'name' => $model . "Factory",
+//        ]);
 
         \Artisan::call('scaffold:service', [
             'name' => $model . 'Service',
             '--model' => $model,
         ]);
 
-        \Artisan::call('scaffold:provider', [
-            'name' => $model . 'ServiceProvider',
-            '--model' => $model,
-        ]);
+//        \Artisan::call('scaffold:provider', [
+//            'name' => $model . 'ServiceProvider',
+//            '--model' => $model,
+//        ]);
 
         try {
             $this->call('scaffold:permission', [
@@ -146,11 +146,6 @@ class ScaffoldSingle extends Command
 
         // services
         $this->deleteFile(app_path() . '/Services/' . $model . 'Service.php');
-
-        // Repositories
-        $this->deleteFile(app_path() . '/Repositories/' . $model . '/Eloquent' . $model . 'Repository.php');
-        $this->deleteFile(app_path() . '/Repositories/' . $model . '/' . $model . 'Interface.php');
-        $this->deleteFile(app_path() . '/Repositories/' . $model . '/' . $model . 'ServiceProvider.php');
 
         // Search Service
         $this->deleteFile(app_path() . '/Http/SearchFilters/' . $location . '/' . $model . '/' . $model . 'Search.php');

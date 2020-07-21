@@ -2,15 +2,45 @@
 
 namespace App\Services;
 
-use App\Repositories\{{MODEL}}\{{MODEL}}Interface;
+use App\Models\{{MODEL}};
 
-class DummyClass
+class DummyClass extends BaseService
 {
     protected $query;
 
-    public function __construct({{MODEL}}Interface $model)
+    public function __construct({{MODEL}} $model)
     {
         $this->model = $model;
+    }
+
+    /**
+     * count the model data
+     *
+     * @return collection
+     */
+    public function count()
+    {
+        return $this->model->with($with)->get();
+    }
+
+    /**
+     * get all of the model data
+     *
+     * @return collection
+     */
+    public function get(array $with = []))
+    {
+        return $this->model->with($with)->get();
+    }
+
+    /**
+     * get all of the model data
+     *
+     * @return collection
+     */
+    public function all(array $with = []))
+    {
+        return $this->model->with($with)->all();
     }
 
     /**
@@ -18,9 +48,19 @@ class DummyClass
      *
      * @return collection
      */
-    public function getAll()
+    public function paginated($num, array $with = [])
     {
-        return $this->model->paginate(config('swell.pagination'));
+        return $this->model->with($with)->paginate($num);
+    }
+
+    /**
+     * get all of the data from the repository
+     *
+     * @return collection
+     */
+    public function orderBy($column, $value, $with = []);
+    {
+        return $this->with($with)->orderBy($column, $value);
     }
 
     /**
@@ -29,9 +69,9 @@ class DummyClass
      * @param integer $id
      * @return collection
      */
-    public function getById($id)
+    public function getById($id, $with = [])
     {
-        return $this->model->getById($id);
+        return $this->model->with($with)->find($id);
     }
 
     /**
@@ -41,11 +81,11 @@ class DummyClass
      * @param date $to_date
      * @return collection
      */
-    public function getBetweenDates($column, $from_date, $to_date)
+    public function getBetweenDates($column, $from_date, $to_date, $paginateAmount = config('site.pagination'))
     {
         return $this->model->where($column, $from_date, '>')
                            ->where($column, $to_date, '<')
-                           ->paginate(config('swell.pagination'));
+                           ->paginate($paginateAmount);
     }
 
     /**
@@ -68,17 +108,32 @@ class DummyClass
      */
     public function update($id, $attributes)
     {
-        return $this->model->updateById($id, $attributes);
+        return $this->model->where('id', $id)->update($attributes);
     }
 
     /**
-     * delete the data
+     * delete single record
      *
      * @param array $attributes
      * @return void
      */
-    public function destroy($attributes)
+    public function delete($id)
     {
-        return $this->model->deleteMultipleById($attributes);
+        return $this->getById($id)->delete;
+    }
+
+    /**
+     * delete multiple records
+     *
+     * @param array $attributes
+     * @return void
+     */
+    public function deleteMultiple($ids)
+    {
+        foreach($ids AS $id){
+            $this->getById($id)->delete;
+        }
+
+        return true;
     }
 }

@@ -52,13 +52,6 @@ class ScaffoldProject extends Command
             }
         }
 
-        if ($this->confirm('Next you will see a list of service providers to add to the app.php, do you wish to continue?')) {
-            $this->call('scaffold:provider-list');
-        };
-
-        if ($this->confirm('Next you will see a list of repository providers to add to the app.php, do you wish to continue?')) {
-            $this->call('scaffold:repository-list');
-        };
 
         if ($this->confirm('Next you will see a list of policy providers to add to the AuthServiceProvider.php, do you wish to continue?')) {
             $this->call('scaffold:policy-list');
