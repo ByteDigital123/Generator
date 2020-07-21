@@ -1,11 +1,12 @@
 {
-    "name": "bytedigital123/scaffold",
-    "description": "Laravel Scaffolder",
+    "name": "bytedigital123/pixel-boilerplate",
+    "description": "Laravel Pixel Boilerplate",
     "keywords": [
         "bytedigital123",
-        "scaffold"
+        "Pixel",
+        "Boilerplate"
     ],
-    "homepage": "https://github.com/bytedigital123/scaffold",
+    "homepage": "https://github.com/bytedigital123/pixel-boilerplate",
     "license": "MIT",
     "type": "library",
     "authors": [
