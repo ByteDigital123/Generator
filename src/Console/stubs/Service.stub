@@ -16,9 +16,9 @@ class DummyClass extends BaseService
     /**
      * count the model data
      *
-     * @return collection
+     * @return
      */
-    public function count()
+    public function count($with = [])
     {
         return $this->model->with($with)->get();
     }
@@ -26,9 +26,9 @@ class DummyClass extends BaseService
     /**
      * get all of the model data
      *
-     * @return collection
+     * @return
      */
-    public function get(array $with = []))
+    public function get($with = [])
     {
         return $this->model->with($with)->get();
     }
@@ -36,9 +36,9 @@ class DummyClass extends BaseService
     /**
      * get all of the model data
      *
-     * @return collection
+     * @return
      */
-    public function all(array $with = []))
+    public function all($with = [])
     {
         return $this->model->with($with)->all();
     }
@@ -46,19 +46,19 @@ class DummyClass extends BaseService
     /**
      * get all of the data from the repository
      *
-     * @return collection
+     * @return
      */
-    public function paginated($num, array $with = [])
-    {
-        return $this->model->with($with)->paginate($num);
-    }
+    public function paginated($num, $with = [])
+{
+    return $this->model->with($with)->paginate($num);
+}
 
     /**
      * get all of the data from the repository
      *
-     * @return collection
+     * @return
      */
-    public function orderBy($column, $value, $with = []);
+    public function orderBy($column, $value, $with = [])
     {
         return $this->with($with)->orderBy($column, $value);
     }
@@ -67,7 +67,7 @@ class DummyClass extends BaseService
      * get a single row of data
      *
      * @param integer $id
-     * @return collection
+     * @return
      */
     public function getById($id, $with = [])
     {
@@ -79,13 +79,13 @@ class DummyClass extends BaseService
      *
      * @param date $from_date
      * @param date $to_date
-     * @return collection
+     * @return
      */
-    public function getBetweenDates($column, $from_date, $to_date, $paginateAmount = config('site.pagination'))
+    public function getBetweenDates($column, $from_date, $to_date, $paginateAmount = 12)
     {
         return $this->model->where($column, $from_date, '>')
-                           ->where($column, $to_date, '<')
-                           ->paginate($paginateAmount);
+            ->where($column, $to_date, '<')
+            ->paginate($paginateAmount);
     }
 
     /**
@@ -119,7 +119,7 @@ class DummyClass extends BaseService
      */
     public function delete($id)
     {
-        return $this->getById($id)->delete;
+        return $this->getById($id)->delete();
     }
 
     /**
@@ -131,7 +131,7 @@ class DummyClass extends BaseService
     public function deleteMultiple($ids)
     {
         foreach($ids AS $id){
-            $this->getById($id)->delete;
+            $this->getById($id)->delete();
         }
 
         return true;
