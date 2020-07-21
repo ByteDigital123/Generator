@@ -14,7 +14,7 @@ class GeneratorService extends GeneratorCommand
      *
      * @var string
      */
-    protected $name = 'Generator:service';
+    protected $name = 'generator:service';
 
     /**
      * The console command description.

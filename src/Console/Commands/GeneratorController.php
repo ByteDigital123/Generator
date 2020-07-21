@@ -14,7 +14,7 @@ class GeneratorController extends GeneratorCommand
      *
      * @var string
      */
-    protected $name = 'Generator:controller';
+    protected $name = 'generator:controller';
 
     /**
      * The console command description.

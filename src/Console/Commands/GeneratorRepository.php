@@ -14,7 +14,7 @@ class GeneratorRepository extends GeneratorCommand
      *
      * @var string
      */
-    protected $name = 'Generator:repository';
+    protected $name = 'generator:repository';
 
     /**
      * The console command description.

@@ -15,7 +15,7 @@ class GeneratorPolicy extends GeneratorCommand
      *
      * @var string
      */
-    protected $name = 'Generator:policy';
+    protected $name = 'generator:policy';
 
     /**
      * The console command description.

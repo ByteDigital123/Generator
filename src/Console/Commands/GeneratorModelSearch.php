@@ -14,7 +14,7 @@ class GeneratorModelSearch extends GeneratorCommand
      *
      * @var string
      */
-    protected $name = 'Generator:search';
+    protected $name = 'generator:search';
 
     /**
      * The console command description.
