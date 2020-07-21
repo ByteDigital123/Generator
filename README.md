@@ -1,4 +1,4 @@
-# Laravel Scaffold
+# Laravel Pixel Boilerplate
 
 A package to quickly scaffold controllers, resources, requests, repositories, services and policies for namespaced folders.
 
@@ -14,7 +14,7 @@ A package to quickly scaffold controllers, resources, requests, repositories, se
 You can install the package via composer:
 
 ```bash
-composer require bytedigital123/scaffold
+composer require bytedigital123/pixel-boilerplate
 ```
 
 <p align="center">
