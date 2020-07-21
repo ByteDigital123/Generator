@@ -1,6 +1,6 @@
 <?php
 
-namespace Bytedigital123\Generator\Console\Commands;
+namespace Bytedigital123\Generator\src\Console\Commands;
 
 use Illuminate\Console\Command;
 
