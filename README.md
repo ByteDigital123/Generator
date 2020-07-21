@@ -1,6 +1,6 @@
 # Laravel Pixel Boilerplate
 
-A package to quickly scaffold controllers, resources, requests, repositories, services and policies for namespaced folders.
+A package to quickly Generator controllers, resources, requests, repositories, services and policies for namespaced folders.
 
 #### Todo:
 
@@ -26,7 +26,7 @@ composer require bytedigital123/pixel-boilerplate
 Publish the config file with
 
 ```
-php artisan vendor:publish --provider="Bytedigital123\Scaffold\ScaffoldServiceProvider"
+php artisan vendor:publish --provider="Bytedigital123\Generator\GeneratorServiceProvider"
 ```
 
 The config file holds the details for any models that you dont want files generated for, and the namepsaces that you would like to use. It also has a config for the default place where your models live.
@@ -36,7 +36,7 @@ When the code runs, it will run through all of your models in the folder you hav
 Run the code with
 
 ```
-php artisan scaffold:project
+php artisan Generator:project
 ```
 
 Just to be safe

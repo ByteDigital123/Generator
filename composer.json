@@ -21,12 +21,12 @@
     },
     "autoload": {
         "psr-4": {
-            "Bytedigital123\\Scaffold\\": "src"
+            "Bytedigital123\\Generator\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Bytedigital123\\Scaffold\\Tests\\": "tests"
+            "Bytedigital123\\Generator\\Tests\\": "tests"
         }
     },
     "scripts": {
@@ -39,10 +39,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Bytedigital123\\Scaffold\\ScaffoldServiceProvider"
+                "Bytedigital123\\Generator\\GeneratorServiceProvider"
             ],
             "aliases": {
-                "Scaffold": "Bytedigital123\\Scaffold\\ScaffoldFacade"
+                "Generator": "Bytedigital123\\Generator\\GeneratorFacade"
             }
         }
     }

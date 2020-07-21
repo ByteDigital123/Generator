@@ -1,24 +1,24 @@
 <?php
 
-namespace Bytedigital123\pixel-boilerplate\Console\Commands;
+namespace Bytedigital123\Generator\Console\Commands;
 
 use Illuminate\Console\Command;
 
-class ScaffoldSingle extends Command
+class GeneratorSingle extends Command
 {
     /**
      * The name and signature of the console command.
      *
      * @var string
      */
-    protected $signature = 'scaffold:single {model} {location}';
+    protected $signature = 'Generator:single {model} {location}';
 
     /**
      * The console command description.
      *
      * @var string
      */
-    protected $description = 'Scaffold files for given model';
+    protected $description = 'Generator files for given model';
 
     /**
      * Create a new command instance.
@@ -46,7 +46,7 @@ class ScaffoldSingle extends Command
         // remove the files before remaking them
         $this->deleteFiles($model, $location);
 
-        \Artisan::call('scaffold:controller', [
+        \Artisan::call('Generator:controller', [
             'name' => $model . "Controller",
             '--model' => $model,
             '--location' => $location,
@@ -76,31 +76,31 @@ class ScaffoldSingle extends Command
         }
 
 //        // 4. create repositories
-//        \Artisan::call('scaffold:interface', [
+//        \Artisan::call('Generator:interface', [
 //            'name' => $model . "Interface",
 //            '--model' => $model,
 //        ]);
 //
 //        // call Create Repository
-//        \Artisan::call('scaffold:repository', [
+//        \Artisan::call('Generator:repository', [
 //            'name' => "\Eloquent" . $model . "Repository",
 //            '--model' => $model,
 //        ]);
 
 //        // Call Create ServiceProvider
-//        \Artisan::call('scaffold:serviceProvider', [
+//        \Artisan::call('Generator:serviceProvider', [
 //            'name' => $model . "ServiceProvider",
 //            '--model' => $model,
 //        ]);
 
         // Call Create Search
-        \Artisan::call('scaffold:search', [
+        \Artisan::call('Generator:search', [
             'name' => $model . "Search",
             '--model' => $model,
             '--location' => $location,
         ]);
 
-        \Artisan::call('scaffold:policy', [
+        \Artisan::call('Generator:policy', [
             'name' => $model . "Policy",
             '--model' => $model,
             '--location' => $location,
@@ -110,18 +110,18 @@ class ScaffoldSingle extends Command
 //            'name' => $model . "Factory",
 //        ]);
 
-        \Artisan::call('scaffold:service', [
+        \Artisan::call('Generator:service', [
             'name' => $model . 'Service',
             '--model' => $model,
         ]);
 
-//        \Artisan::call('scaffold:provider', [
+//        \Artisan::call('Generator:provider', [
 //            'name' => $model . 'ServiceProvider',
 //            '--model' => $model,
 //        ]);
 
         try {
-            $this->call('scaffold:permission', [
+            $this->call('Generator:permission', [
                 'model' => $model,
                 'location' => $location,
             ]);

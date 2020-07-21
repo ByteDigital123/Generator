@@ -1,13 +1,13 @@
 <?php
 
-namespace Bytedigital123\pixel-boilerplate;
+namespace Bytedigital123\Generator;
 
 use Illuminate\Support\Facades\Facade;
 
 /**
- * @see \Bytedigital123\pixel-boilerplate\Skeleton\SkeletonClass
+ * @see \Bytedigital123\Generator\Skeleton\SkeletonClass
  */
-class ScaffoldFacade extends Facade
+class GeneratorFacade extends Facade
 {
     /**
      * Get the registered name of the component.
@@ -16,6 +16,6 @@ class ScaffoldFacade extends Facade
      */
     protected static function getFacadeAccessor()
     {
-        return 'scaffold';
+        return 'Generator';
     }
 }

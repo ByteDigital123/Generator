@@ -1,29 +1,29 @@
 <?php
 
-namespace Bytedigital123\pixel-boilerplate\Console\Commands;
+namespace Bytedigital123\Generator\Console\Commands;
 
 use Symfony\Component\Console\Input\InputOption;
 use InvalidArgumentException;
 use Illuminate\Support\Str;
 use Illuminate\Console\GeneratorCommand;
 
-class ScaffoldProvider extends GeneratorCommand
+class GeneratorModelSearch extends GeneratorCommand
 {
     /**
      * The name and signature of the console command.
      *
      * @var string
      */
-    protected $name = 'scaffold:provider';
+    protected $name = 'Generator:search';
 
     /**
      * The console command description.
      *
      * @var string
      */
-    protected $description = 'Create Service Provider';
+    protected $description = 'Create Model search';
 
-    protected $type = "Service Provider";
+    protected $type = "Search";
 
     /**
      * Get the stub file for the generator.
@@ -32,7 +32,7 @@ class ScaffoldProvider extends GeneratorCommand
      */
     protected function getStub()
     {
-        return './vendor/bytedigital123/scaffold/src/Console/stubs/ServiceProvider.stub';
+        return './vendor/bytedigital123/Generator/src/Console/stubs/ModelSearch.stub';
     }
 
     /**
@@ -44,10 +44,11 @@ class ScaffoldProvider extends GeneratorCommand
     {
         return [
             ['model', 'm', InputOption::VALUE_REQUIRED, 'Generate a repository for the given model.'],
+            ['location', 'l', InputOption::VALUE_REQUIRED, 'Specify the location for the namespace'],
         ];
     }
 
-    public function getArguments()
+    protected function getArguments()
     {
         return [
             ['name', InputOption::VALUE_REQUIRED, 'Name of the controller'],
@@ -88,8 +89,8 @@ class ScaffoldProvider extends GeneratorCommand
         $modelClass = $this->parseModel($this->option('model'));
 
         return array_merge($replace, [
-            '{{MODEL}}' => class_basename($modelClass),
-            '{{APP_NAME}}' => env('APP_NAME'),
+            'DummyName' => $this->argument('name'),
+            'ClassName' => class_basename($modelClass),
         ]);
     }
 
@@ -124,6 +125,6 @@ class ScaffoldProvider extends GeneratorCommand
      */
     protected function getDefaultNamespace($rootNamespace)
     {
-        return $rootNamespace . '\Providers\\' . env('APP_NAME');
+        return $rootNamespace . '\Http\\SearchFilters\\' . $this->option('location') . '\\' . $this->option('model');
     }
 }

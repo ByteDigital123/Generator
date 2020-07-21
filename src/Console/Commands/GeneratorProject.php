@@ -1,24 +1,24 @@
 <?php
 
-namespace Bytedigital123\pixel-boilerplate\Console\Commands;
+namespace Bytedigital123\Generator\Console\Commands;
 
 use Illuminate\Console\Command;
 
-class ScaffoldProject extends Command
+class GeneratorProject extends Command
 {
     /**
      * The name and signature of the console command.
      *
      * @var string
      */
-    protected $signature = 'scaffold:project';
+    protected $signature = 'Generator:project';
 
     /**
      * The console command description.
      *
      * @var string
      */
-    protected $description = 'Scaffold the project';
+    protected $description = 'Generator the project';
 
     /**
      * Create a new command instance.
@@ -38,14 +38,14 @@ class ScaffoldProject extends Command
     public function handle()
     {
 
-        $location = $this->choice('Which namespace shall we save them under?', config('scaffold.areas'));
+        $location = $this->choice('Which namespace shall we save them under?', config('Generator.areas'));
 
-        foreach (glob('./' . config('scaffold.models') . '/*.php') as $file) {
+        foreach (glob('./' . config('Generator.models') . '/*.php') as $file) {
             $model = basename($file, '.php');
 
-            if (!in_array($model, config('scaffold.legacyModels'))) {
+            if (!in_array($model, config('Generator.legacyModels'))) {
 
-                $this->call('scaffold:single', [
+                $this->call('Generator:single', [
                     'model' => $model,
                     'location' => $location,
                 ]);
@@ -54,7 +54,7 @@ class ScaffoldProject extends Command
 
 
         if ($this->confirm('Next you will see a list of policy providers to add to the AuthServiceProvider.php, do you wish to continue?')) {
-            $this->call('scaffold:policy-list');
+            $this->call('Generator:policy-list');
         };
 
         $this->info('Completed');

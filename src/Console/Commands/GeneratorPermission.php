@@ -1,11 +1,11 @@
 <?php
 
-namespace Bytedigital123\pixel-boilerplate\Console\Commands;
+namespace Bytedigital123\Generator\Console\Commands;
 
 use Illuminate\Console\Command;
 use App\Services\PermissionService;
 
-class ScaffoldPermission extends Command
+class GeneratorPermission extends Command
 {
     protected $permissionService;
 
@@ -14,14 +14,14 @@ class ScaffoldPermission extends Command
      *
      * @var string
      */
-    protected $signature = 'scaffold:permission {model} {location}';
+    protected $signature = 'Generator:permission {model} {location}';
 
     /**
      * The console command description.
      *
      * @var string
      */
-    protected $description = 'Scaffold the default list of permissions';
+    protected $description = 'Generator the default list of permissions';
 
     /**
      * Create a new command instance.

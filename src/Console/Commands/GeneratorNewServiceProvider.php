@@ -1,20 +1,20 @@
 <?php
 
-namespace Bytedigital123\pixel-boilerplate\Console\Commands;
+namespace Bytedigital123\Generator\Console\Commands;
 
 use Symfony\Component\Console\Input\InputOption;
 use InvalidArgumentException;
 use Illuminate\Support\Str;
 use Illuminate\Console\GeneratorCommand;
 
-class ScaffoldNewServiceProvider extends GeneratorCommand
+class GeneratorNewServiceProvider extends GeneratorCommand
 {
     /**
      * The name and signature of the console command.
      *
      * @var string
      */
-    protected $name = 'scaffold:serviceProvider';
+    protected $name = 'Generator:serviceProvider';
 
     /**
      * The console command description.
@@ -32,7 +32,7 @@ class ScaffoldNewServiceProvider extends GeneratorCommand
      */
     protected function getStub()
     {
-        return './vendor/bytedigital123/scaffold/src/Console/stubs/RepoServiceProvider.stub';
+        return './vendor/bytedigital123/Generator/src/Console/stubs/RepoServiceProvider.stub';
     }
 
     /**

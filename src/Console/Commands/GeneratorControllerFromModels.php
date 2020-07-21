@@ -1,24 +1,24 @@
 <?php
 
-namespace Bytedigital123\pixel-boilerplate\Console\Commands;
+namespace Bytedigital123\Generator\Console\Commands;
 
 use Illuminate\Console\Command;
 
-class ScaffoldResourceFromModel extends Command
+class GeneratorControllerFromModels extends Command
 {
     /**
      * The name and signature of the console command.
      *
      * @var string
      */
-    protected $signature = 'scaffold:create:model {--location}';
+    protected $signature = 'Generator:controller:model {--location}';
 
     /**
      * The console command description.
      *
      * @var string
      */
-    protected $description = 'Create the resource files from the model';
+    protected $description = 'Run the controller command for all models in app';
 
     /**
      * Create a new command instance.
@@ -44,16 +44,16 @@ class ScaffoldResourceFromModel extends Command
             'Role',
         ];
 
-        foreach (glob('./' . config('scaffold.models') . '/*.php') as $file) {
+        // run through each model
+        foreach (glob('./' . config('Generator.models') . '/*.php') as $file) {
             $filename = basename($file, '.php');
 
             if (!in_array($filename, $currentFiles)) {
-                \Artisan::call('make:resource', [
-                    'name' => $this->option('location') . "\\" . $filename . "\\" . $filename . "Resource",
-                ]);
-
-                \Artisan::call('make:resource', [
-                    'name' => $this->option('location') . "\\" . $filename . "\\" . $filename . "Collection",
+                // call Create controller
+                \Artisan::call('create:controller', [
+                    'name' => $filename . "Controller",
+                    '--model' => $filename,
+                    '--location' => $this->option('location'),
                 ]);
             }
         }

@@ -1,6 +1,6 @@
 <?php
 
-namespace Bytedigital123\pixel-boilerplate\Console\Commands;
+namespace Bytedigital123\Generator\Console\Commands;
 
 use Illuminate\Console\Command;
 
@@ -11,7 +11,7 @@ class GeneratePolicyAppConfig extends Command
      *
      * @var string
      */
-    protected $signature = 'scaffold:policy-list';
+    protected $signature = 'Generator:policy-list';
 
     /**
      * The console command description.
@@ -37,10 +37,10 @@ class GeneratePolicyAppConfig extends Command
      */
     public function handle()
     {
-        foreach (glob('./' . config('scaffold.models') . '/*.php') as $file) {
+        foreach (glob('./' . config('Generator.models') . '/*.php') as $file) {
             $model = basename($file, '.php');
 
-            if (!in_array($model, config('scaffold.legacyModels'))) {
+            if (!in_array($model, config('Generator.legacyModels'))) {
                 $this->info('App\Models\\' . $model . '::class =>  App\Policies\Api\\' . $model . 'Policy::class,');
             }
         }

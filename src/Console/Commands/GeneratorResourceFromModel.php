@@ -1,24 +1,24 @@
 <?php
 
-namespace Bytedigital123\pixel-boilerplate\Console\Commands;
+namespace Bytedigital123\Generator\Console\Commands;
 
 use Illuminate\Console\Command;
 
-class ScaffoldRequestFromModel extends Command
+class GeneratorResourceFromModel extends Command
 {
     /**
      * The name and signature of the console command.
      *
      * @var string
      */
-    protected $signature = 'scaffold:create:model {--location}';
+    protected $signature = 'Generator:create:model {--location}';
 
     /**
      * The console command description.
      *
      * @var string
      */
-    protected $description = 'Create the request files for the models';
+    protected $description = 'Create the resource files from the model';
 
     /**
      * Create a new command instance.
@@ -44,16 +44,16 @@ class ScaffoldRequestFromModel extends Command
             'Role',
         ];
 
-        foreach (glob('./' . config('scaffold.models') . '/*.php') as $file) {
+        foreach (glob('./' . config('Generator.models') . '/*.php') as $file) {
             $filename = basename($file, '.php');
 
             if (!in_array($filename, $currentFiles)) {
-                \Artisan::call('make:request', [
-                    'name' => $this->option('location') . "\\" . $filename . "\Store" . $filename . "Request",
+                \Artisan::call('make:resource', [
+                    'name' => $this->option('location') . "\\" . $filename . "\\" . $filename . "Resource",
                 ]);
 
-                \Artisan::call('make:request', [
-                    'name' => $this->option('location') . "\\" . $filename . "\Update" . $filename . "Request",
+                \Artisan::call('make:resource', [
+                    'name' => $this->option('location') . "\\" . $filename . "\\" . $filename . "Collection",
                 ]);
             }
         }

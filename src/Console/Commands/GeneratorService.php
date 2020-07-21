@@ -1,29 +1,29 @@
 <?php
 
-namespace Bytedigital123\pixel-boilerplate\Console\Commands;
+namespace Bytedigital123\Generator\Console\Commands;
 
 use Symfony\Component\Console\Input\InputOption;
 use InvalidArgumentException;
 use Illuminate\Support\Str;
 use Illuminate\Console\GeneratorCommand;
 
-class ScaffoldModelSearch extends GeneratorCommand
+class GeneratorService extends GeneratorCommand
 {
     /**
      * The name and signature of the console command.
      *
      * @var string
      */
-    protected $name = 'scaffold:search';
+    protected $name = 'Generator:service';
 
     /**
      * The console command description.
      *
      * @var string
      */
-    protected $description = 'Create Model search';
+    protected $description = 'Create a New Service';
 
-    protected $type = "Search";
+    protected $type = "Service";
 
     /**
      * Get the stub file for the generator.
@@ -32,7 +32,14 @@ class ScaffoldModelSearch extends GeneratorCommand
      */
     protected function getStub()
     {
-        return './vendor/bytedigital123/scaffold/src/Console/stubs/ModelSearch.stub';
+        return './vendor/bytedigital123/Generator/src/Console/stubs/Service.stub';
+    }
+
+    public function getArguments()
+    {
+        return [
+            ['name', InputOption::VALUE_REQUIRED, 'Name of the controller'],
+        ];
     }
 
     /**
@@ -44,14 +51,6 @@ class ScaffoldModelSearch extends GeneratorCommand
     {
         return [
             ['model', 'm', InputOption::VALUE_REQUIRED, 'Generate a repository for the given model.'],
-            ['location', 'l', InputOption::VALUE_REQUIRED, 'Specify the location for the namespace'],
-        ];
-    }
-
-    protected function getArguments()
-    {
-        return [
-            ['name', InputOption::VALUE_REQUIRED, 'Name of the controller'],
         ];
     }
 
@@ -66,9 +65,7 @@ class ScaffoldModelSearch extends GeneratorCommand
     {
         $replace = [];
 
-        if ($this->option('model')) {
-            $replace = $this->buildModelReplacements($replace);
-        }
+        $replace = $this->buildModelReplacements($replace);
 
         return str_replace(
             array_keys($replace),
@@ -89,8 +86,7 @@ class ScaffoldModelSearch extends GeneratorCommand
         $modelClass = $this->parseModel($this->option('model'));
 
         return array_merge($replace, [
-            'DummyName' => $this->argument('name'),
-            'ClassName' => class_basename($modelClass),
+            '{{MODEL}}' => class_basename($modelClass),
         ]);
     }
 
@@ -109,10 +105,6 @@ class ScaffoldModelSearch extends GeneratorCommand
 
         $model = trim(str_replace('/', '\\', $model), '\\');
 
-        if (!Str::startsWith($model, $rootNamespace = $this->laravel->getNamespace())) {
-            $model = $rootNamespace . $model;
-        }
-
         return $model;
     }
 
@@ -125,6 +117,6 @@ class ScaffoldModelSearch extends GeneratorCommand
      */
     protected function getDefaultNamespace($rootNamespace)
     {
-        return $rootNamespace . '\Http\\SearchFilters\\' . $this->option('location') . '\\' . $this->option('model');
+        return $rootNamespace . '\Services';
     }
 }

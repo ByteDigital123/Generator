@@ -1,30 +1,29 @@
 <?php
 
-namespace Bytedigital123\pixel-boilerplate\Console\Commands;
+namespace Bytedigital123\Generator\Console\Commands;
 
 use Symfony\Component\Console\Input\InputOption;
 use InvalidArgumentException;
 use Illuminate\Support\Str;
 use Illuminate\Console\GeneratorCommand;
 
-class ScaffoldPolicy extends GeneratorCommand
+class GeneratorProvider extends GeneratorCommand
 {
-
     /**
      * The name and signature of the console command.
      *
      * @var string
      */
-    protected $name = 'scaffold:policy';
+    protected $name = 'Generator:provider';
 
     /**
      * The console command description.
      *
      * @var string
      */
-    protected $description = 'Create Policy';
+    protected $description = 'Create Service Provider';
 
-    protected $type = "Policy";
+    protected $type = "Service Provider";
 
     /**
      * Get the stub file for the generator.
@@ -33,7 +32,7 @@ class ScaffoldPolicy extends GeneratorCommand
      */
     protected function getStub()
     {
-        return './vendor/bytedigital123/scaffold/src/Console/stubs/Policy.stub';
+        return './vendor/bytedigital123/Generator/src/Console/stubs/ServiceProvider.stub';
     }
 
     /**
@@ -44,12 +43,11 @@ class ScaffoldPolicy extends GeneratorCommand
     protected function getOptions()
     {
         return [
-            ['model', 'm', InputOption::VALUE_REQUIRED, 'Generate a policy for the given model.'],
-            ['location', 'l', InputOption::VALUE_REQUIRED, 'Specify the location for the namespace'],
+            ['model', 'm', InputOption::VALUE_REQUIRED, 'Generate a repository for the given model.'],
         ];
     }
 
-    protected function getArguments()
+    public function getArguments()
     {
         return [
             ['name', InputOption::VALUE_REQUIRED, 'Name of the controller'],
@@ -90,8 +88,8 @@ class ScaffoldPolicy extends GeneratorCommand
         $modelClass = $this->parseModel($this->option('model'));
 
         return array_merge($replace, [
-            'DummyClass' => class_basename($modelClass),
-            'SnakeClassName' => Str::snake(class_basename($modelClass)),
+            '{{MODEL}}' => class_basename($modelClass),
+            '{{APP_NAME}}' => env('APP_NAME'),
         ]);
     }
 
@@ -126,6 +124,6 @@ class ScaffoldPolicy extends GeneratorCommand
      */
     protected function getDefaultNamespace($rootNamespace)
     {
-        return $rootNamespace . '\Policies\\' . $this->option('location');
+        return $rootNamespace . '\Providers\\' . env('APP_NAME');
     }
 }

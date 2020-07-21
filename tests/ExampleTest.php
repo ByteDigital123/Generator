@@ -1,6 +1,6 @@
 <?php
 
-namespace Bytedigital123\pixel-boilerplate\Tests;
+namespace Bytedigital123\Generator\Tests;
 
 use PHPUnit\Framework\TestCase;
 

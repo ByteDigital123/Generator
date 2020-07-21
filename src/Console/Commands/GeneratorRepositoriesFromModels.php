@@ -1,17 +1,17 @@
 <?php
 
-namespace Bytedigital123\pixel-boilerplate\Console\Commands;
+namespace Bytedigital123\Generator\Console\Commands;
 
 use Illuminate\Console\Command;
 
-class ScaffoldRepositoriesFromModels extends Command
+class GeneratorRepositoriesFromModels extends Command
 {
     /**
      * The name and signature of the console command.
      *
      * @var string
      */
-    protected $signature = 'scaffold:repository:model';
+    protected $signature = 'Generator:repository:model';
 
     /**
      * The console command description.
@@ -45,7 +45,7 @@ class ScaffoldRepositoriesFromModels extends Command
         ];
 
         // run through each model
-        foreach (glob('./' . config('scaffold.models') . '/*.php') as $file) {
+        foreach (glob('./' . config('Generator.models') . '/*.php') as $file) {
             $filename = basename($file, '.php');
 
             if (!in_array($filename, $currentFiles)) {

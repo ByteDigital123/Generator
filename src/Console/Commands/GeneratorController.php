@@ -1,20 +1,20 @@
 <?php
 
-namespace Bytedigital123\pixel-boilerplate\Console\Commands;
+namespace Bytedigital123\Generator\Console\Commands;
 
 use Symfony\Component\Console\Input\InputOption;
 use InvalidArgumentException;
 use Illuminate\Support\Str;
 use Illuminate\Console\GeneratorCommand;
 
-class ScaffoldController extends GeneratorCommand
+class GeneratorController extends GeneratorCommand
 {
     /**
      * The name and signature of the console command.
      *
      * @var string
      */
-    protected $name = 'scaffold:controller';
+    protected $name = 'Generator:controller';
 
     /**
      * The console command description.
@@ -33,10 +33,10 @@ class ScaffoldController extends GeneratorCommand
     {
         $locationOption = $this->option('location');
         if ($locationOption == 'Api') {
-            return './vendor/bytedigital123/scaffold/src/Console/stubs/ApiController.stub';
+            return './vendor/bytedigital123/Generator/src/Console/stubs/ApiController.stub';
         }
 
-        return './vendor/bytedigital123/scaffold/src/Console/stubs/Controller.stub';
+        return './vendor/bytedigital123/Generator/src/Console/stubs/Controller.stub';
     }
 
     /**
