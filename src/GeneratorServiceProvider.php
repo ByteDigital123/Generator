@@ -3,25 +3,21 @@
 namespace Bytedigital123\Generator;
 
 use Illuminate\Support\ServiceProvider;
-use Bytedigital123\Generator\Generator;
-use Bytedigital123\Generator\src\Console\Commands\GeneratorSingle;
-use Bytedigital123\Generator\src\Console\Commands\GeneratorService;
-use Bytedigital123\Generator\src\Console\Commands\GeneratorResourceFromModel;
-use Bytedigital123\Generator\src\Console\Commands\GeneratorRequestFromModel;
-use Bytedigital123\Generator\src\Console\Commands\GeneratorRepository;
-use Bytedigital123\Generator\src\Console\Commands\GeneratorRepositoriesFromModels;
-use Bytedigital123\Generator\src\Console\Commands\GeneratorProvider;
-use Bytedigital123\Generator\src\Console\Commands\GeneratorProject;
-use Bytedigital123\Generator\src\Console\Commands\GeneratorPolicy;
-use Bytedigital123\Generator\src\Console\Commands\GeneratorPermission;
-use Bytedigital123\Generator\src\Console\Commands\GeneratorNewServiceProvider;
-use Bytedigital123\Generator\src\Console\Commands\GeneratorModelSearch;
-use Bytedigital123\Generator\src\Console\Commands\GeneratorInterface;
-use Bytedigital123\Generator\src\Console\Commands\GeneratorControllerFromModels;
-use Bytedigital123\Generator\src\Console\Commands\GeneratorController;
-use Bytedigital123\Generator\src\Console\Commands\GenerateRepositoryAppConfig;
-use Bytedigital123\Generator\src\Console\Commands\GenerateProviderAppConfig;
-use Bytedigital123\Generator\src\Console\Commands\GeneratePolicyAppConfig;
+use Bytedigital123\Generator\Console\Commands\GeneratorSingle;
+use Bytedigital123\Generator\Console\Commands\GeneratorService;
+use Bytedigital123\Generator\Console\Commands\GeneratorResourceFromModel;
+use Bytedigital123\Generator\Console\Commands\GeneratorRequestFromModel;
+use Bytedigital123\Generator\Console\Commands\GeneratorRepository;
+use Bytedigital123\Generator\Console\Commands\GeneratorRepositoriesFromModels;
+use Bytedigital123\Generator\Console\Commands\GeneratorProvider;
+use Bytedigital123\Generator\Console\Commands\GeneratorProject;
+use Bytedigital123\Generator\Console\Commands\GeneratorPolicy;
+use Bytedigital123\Generator\Console\Commands\GeneratorPermission;
+use Bytedigital123\Generator\Console\Commands\GeneratorNewServiceProvider;
+use Bytedigital123\Generator\Console\Commands\GeneratorModelSearch;
+use Bytedigital123\Generator\Console\Commands\GeneratorControllerFromModels;
+use Bytedigital123\Generator\Console\Commands\GeneratorController;
+use Bytedigital123\Generator\Console\Commands\GeneratePolicyAppConfig;
 
 class GeneratorServiceProvider extends ServiceProvider
 {
@@ -62,11 +58,8 @@ class GeneratorServiceProvider extends ServiceProvider
             $this->commands([
                 GeneratorProject::class,
                 GeneratePolicyAppConfig::class,
-                GenerateProviderAppConfig::class,
-                GenerateRepositoryAppConfig::class,
                 GeneratorController::class,
                 GeneratorControllerFromModels::class,
-                GeneratorInterface::class,
                 GeneratorModelSearch::class,
                 GeneratorPermission::class,
                 GeneratorPolicy::class,
