@@ -26,7 +26,7 @@ composer require bytedigital123/pixel-boilerplate
 Publish the config file with
 
 ```
-php artisan vendor:publish --provider="Bytedigital123\pixel-boilerplate\ScaffoldServiceProvider"
+php artisan vendor:publish --provider="Bytedigital123\Scaffold\ScaffoldServiceProvider"
 ```
 
 The config file holds the details for any models that you dont want files generated for, and the namepsaces that you would like to use. It also has a config for the default place where your models live.
