@@ -1,18 +1,18 @@
 {
-    "name": "bytedigital123/pixel-boilerplate",
-    "description": "Laravel Pixel Boilerplate",
+    "name": "bytedigital123/generator",
+    "description": "Laravel Generator",
     "keywords": [
         "bytedigital123",
         "Pixel",
-        "Boilerplate"
+        "Generator"
     ],
-    "homepage": "https://github.com/bytedigital123/pixel-boilerplate",
+    "homepage": "https://github.com/bytedigital123/generator",
     "license": "MIT",
     "type": "library",
     "authors": [
         {
-            "name": "Chris Mills",
-            "email": "chris@byte-digital.com",
+            "name": "Alex Etel",
+            "email": "alex@byte-digital.com",
             "role": "Developer"
         }
     ],

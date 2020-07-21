@@ -14,7 +14,7 @@ A package to quickly Generator controllers, resources, requests, repositories, s
 You can install the package via composer:
 
 ```bash
-composer require bytedigital123/pixel-boilerplate
+composer require bytedigital123/generator
 ```
 
 <p align="center">
