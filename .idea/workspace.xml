@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="78b30021-f282-4c56-818f-c9eb742288ef" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Console/stubs/BaseService.stub" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Console/stubs/Service.stub" beforeDir="false" afterPath="$PROJECT_DIR$/src/Console/stubs/Service.stub" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Console/Commands/GeneratorSingle.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Console/Commands/GeneratorSingle.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -29,14 +28,14 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="json" value="2" />
-          <entry key="php" value="26" />
+          <entry key="php" value="27" />
           <entry key="stub" value="14" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="JSON" value="2" />
-          <entry key="PHP" value="26" />
+          <entry key="PHP" value="27" />
           <entry key="PLAIN_TEXT" value="14" />
         </counts>
       </usages-collector>
@@ -59,6 +58,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Console/Commands/GeneratorSingle.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="663">
+              <caret line="48" column="33" selection-start-line="48" selection-start-column="33" selection-end-line="48" selection-end-column="33" />
+              <caret line="78" column="35" selection-start-line="78" selection-start-column="35" selection-end-line="78" selection-end-column="35" />
+              <caret line="84" column="35" selection-start-line="84" selection-start-column="35" selection-end-line="84" selection-end-column="35" />
+              <caret line="90" column="35" selection-start-line="90" selection-start-column="35" selection-end-line="90" selection-end-column="35" />
+              <caret line="96" column="33" selection-start-line="96" selection-start-column="33" selection-end-line="96" selection-end-column="33" />
+              <caret line="102" column="33" selection-start-line="102" selection-start-column="33" selection-end-line="102" selection-end-column="33" />
+              <caret line="112" column="33" selection-start-line="112" selection-start-column="33" selection-end-line="112" selection-end-column="33" />
+              <caret line="117" column="35" selection-start-line="117" selection-start-column="35" selection-end-line="117" selection-end-column="35" />
+              <caret line="123" column="34" selection-start-line="123" selection-start-column="34" selection-end-line="123" selection-end-column="34" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Console/stubs/Service.stub">
           <provider selected="true" editor-type-id="text-editor">
@@ -68,10 +84,10 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Console/stubs/BaseService.stub">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
+            <state relative-caret-position="-1160">
               <caret line="18" column="26" selection-start-line="18" selection-start-column="26" selection-end-line="18" selection-end-column="26" />
             </state>
           </provider>
@@ -133,7 +149,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Console/stubs/Controller.stub">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-785">
+            <state relative-caret-position="150">
               <caret line="10" column="35" selection-start-line="10" selection-start-column="35" selection-end-line="10" selection-end-column="35" />
             </state>
           </provider>
@@ -183,6 +199,7 @@
         <option value="$PROJECT_DIR$/src/Console/Commands/GeneratePolicyAppConfig.php" />
         <option value="$PROJECT_DIR$/src/Console/stubs/Service.stub" />
         <option value="$PROJECT_DIR$/src/Console/stubs/BaseService.stub" />
+        <option value="$PROJECT_DIR$/src/Console/Commands/GeneratorSingle.php" />
       </list>
     </option>
   </component>
@@ -194,7 +211,7 @@
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="714" />
-    <option name="y" value="23" />
+    <option name="y" value="24" />
     <option name="width" value="1015" />
     <option name="height" value="989" />
   </component>
@@ -282,15 +299,15 @@
       <workItem from="1595239140630" duration="9359000" />
       <workItem from="1595260144799" duration="3232000" />
       <workItem from="1595332854337" duration="4756000" />
-      <workItem from="1595344443087" duration="5988000" />
+      <workItem from="1595344443087" duration="6644000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="23335000" />
+    <option name="totallyTimeSpent" value="23991000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="714" y="23" width="1015" height="989" extended-state="0" />
+    <frame x="714" y="24" width="1015" height="989" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.31860226" />
@@ -372,13 +389,6 @@
         <state relative-caret-position="-325" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Console/Commands/GeneratorSingle.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="67">
-          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Console/stubs/ApiSearchableTrait.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -409,13 +419,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Console/stubs/Controller.stub">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-785">
-          <caret line="10" column="35" selection-start-line="10" selection-start-column="35" selection-end-line="10" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config/config.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="405">
@@ -437,13 +440,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Console/stubs/ApiController.stub">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" selection-start-line="12" selection-end-line="12" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Console/stubs/Service.stub">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
@@ -453,8 +449,37 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Console/stubs/BaseService.stub">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
+        <state relative-caret-position="-1160">
           <caret line="18" column="26" selection-start-line="18" selection-start-column="26" selection-end-line="18" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Console/stubs/ApiController.stub">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" selection-start-line="12" selection-end-line="12" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Console/stubs/Controller.stub">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="35" selection-start-line="10" selection-start-column="35" selection-end-line="10" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Console/Commands/GeneratorSingle.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="663">
+          <caret line="48" column="33" selection-start-line="48" selection-start-column="33" selection-end-line="48" selection-end-column="33" />
+          <caret line="78" column="35" selection-start-line="78" selection-start-column="35" selection-end-line="78" selection-end-column="35" />
+          <caret line="84" column="35" selection-start-line="84" selection-start-column="35" selection-end-line="84" selection-end-column="35" />
+          <caret line="90" column="35" selection-start-line="90" selection-start-column="35" selection-end-line="90" selection-end-column="35" />
+          <caret line="96" column="33" selection-start-line="96" selection-start-column="33" selection-end-line="96" selection-end-column="33" />
+          <caret line="102" column="33" selection-start-line="102" selection-start-column="33" selection-end-line="102" selection-end-column="33" />
+          <caret line="112" column="33" selection-start-line="112" selection-start-column="33" selection-end-line="112" selection-end-column="33" />
+          <caret line="117" column="35" selection-start-line="117" selection-start-column="35" selection-end-line="117" selection-end-column="35" />
+          <caret line="123" column="34" selection-start-line="123" selection-start-column="34" selection-end-line="123" selection-end-column="34" />
         </state>
       </provider>
     </entry>

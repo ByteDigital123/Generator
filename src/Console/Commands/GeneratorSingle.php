@@ -11,7 +11,7 @@ class GeneratorSingle extends Command
      *
      * @var string
      */
-    protected $signature = 'Generator:single {model} {location}';
+    protected $signature = 'generator:single {model} {location}';
 
     /**
      * The console command description.
@@ -46,7 +46,7 @@ class GeneratorSingle extends Command
         // remove the files before remaking them
         $this->deleteFiles($model, $location);
 
-        \Artisan::call('Generator:controller', [
+        \Artisan::call('generator:controller', [
             'name' => $model . "Controller",
             '--model' => $model,
             '--location' => $location,
@@ -76,31 +76,31 @@ class GeneratorSingle extends Command
         }
 
 //        // 4. create repositories
-//        \Artisan::call('Generator:interface', [
+//        \Artisan::call('generator:interface', [
 //            'name' => $model . "Interface",
 //            '--model' => $model,
 //        ]);
 //
 //        // call Create Repository
-//        \Artisan::call('Generator:repository', [
+//        \Artisan::call('generator:repository', [
 //            'name' => "\Eloquent" . $model . "Repository",
 //            '--model' => $model,
 //        ]);
 
 //        // Call Create ServiceProvider
-//        \Artisan::call('Generator:serviceProvider', [
+//        \Artisan::call('generator:serviceProvider', [
 //            'name' => $model . "ServiceProvider",
 //            '--model' => $model,
 //        ]);
 
         // Call Create Search
-        \Artisan::call('Generator:search', [
+        \Artisan::call('generator:search', [
             'name' => $model . "Search",
             '--model' => $model,
             '--location' => $location,
         ]);
 
-        \Artisan::call('Generator:policy', [
+        \Artisan::call('generator:policy', [
             'name' => $model . "Policy",
             '--model' => $model,
             '--location' => $location,
@@ -110,18 +110,18 @@ class GeneratorSingle extends Command
 //            'name' => $model . "Factory",
 //        ]);
 
-        \Artisan::call('Generator:service', [
+        \Artisan::call('generator:service', [
             'name' => $model . 'Service',
             '--model' => $model,
         ]);
 
-//        \Artisan::call('Generator:provider', [
+//        \Artisan::call('generator:provider', [
 //            'name' => $model . 'ServiceProvider',
 //            '--model' => $model,
 //        ]);
 
         try {
-            $this->call('Generator:permission', [
+            $this->call('generator:permission', [
                 'model' => $model,
                 'location' => $location,
             ]);
