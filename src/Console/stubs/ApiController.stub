@@ -10,6 +10,7 @@ use App\Http\Resources\Location\DummyModelClass\DummyResource;
 use App\Http\Requests\Location\DummyModelClass\DummyUpdateRequest;
 use App\Http\Requests\Location\DummyModelClass\DummyStoreRequest;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Log;
 
 class DummyTest extends Controller
 {

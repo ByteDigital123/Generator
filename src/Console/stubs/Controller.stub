@@ -8,6 +8,7 @@ use App\Http\Requests\Location\DummyModelClass\DummyStoreRequest;
 use App\Http\Requests\Location\DummyModelClass\DummyUpdateRequest;
 use App\Http\Resources\Location\DummyModelClass\DummyResource;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Log;
 
 class DummyTest extends Controller
 {
