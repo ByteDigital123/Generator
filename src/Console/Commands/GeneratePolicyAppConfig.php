@@ -37,10 +37,10 @@ class GeneratePolicyAppConfig extends Command
      */
     public function handle()
     {
-        foreach (glob('./' . config('Generator.models') . '/*.php') as $file) {
+        foreach (glob('./' . config('generator.models') . '/*.php') as $file) {
             $model = basename($file, '.php');
 
-            if (!in_array($model, config('Generator.legacyModels'))) {
+            if (!in_array($model, config('generator.legacyModels'))) {
                 $this->info('App\Models\\' . $model . '::class =>  App\Policies\Api\\' . $model . 'Policy::class,');
             }
         }
