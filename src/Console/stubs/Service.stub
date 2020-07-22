@@ -8,7 +8,7 @@ class DummyClass extends BaseService
 {
     public function __construct({{MODEL}} $model)
     {
-        $this->model = $model
+        $this->model = $model;
         parent::__construct($model);
     }
 
